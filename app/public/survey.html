@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FriendFinder</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container bg-">
+        <div class="row">
+            <div class="col-12 ">
+                <a class="display-5" href="/">Home</a>
+                <h1 class="display-6">Personal Information</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form class="ui form" action="/api/friends" method="POST">
+                    <div style="background-color:lightgrey; padding: 2%; border-radius: 10px;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control question" name="name" id="name" aria-describedby="Help" placeholder="Enter Name" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Image</label>
+                            <input type="text" class="form-control question" name="image" id="image" placeholder="Image" required>
+                        </div>
+                    </div>
+
+                    <h1 class="display-6">Survey Questions</h1>
+                    <div style="background-color:lightgrey; padding: 2%; border-radius: 10px;">
+                        <div class="form-group">
+                            <h6>Question 1</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q1" id="q1">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h6>Question 2</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q2" id="q2">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h6>Question 3</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q3" id="q3">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h6>Question 4</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q4" id="q4">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h6>Question 5</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q5" id="q5">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h6>Question 6</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q6" id="q6">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h6>Question 7</h6>
+                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <select class="form-control question col-md-2" name="q7" id="q7">
+                                <option name="" value="">Select Option</option>
+                                <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                <option name="value2" value="2"> 2 </option>
+                                <option name="value3" value="3"> 3 </option>
+                                <option name="value4" value="4"> 4 </option>
+                                <option name="value5" value="5"> 5 Strongly Agreed</option>
+                            </select>
+                            <div class="form-group">
+                                <h6>Question 8</h6>
+                                <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                                <select class="form-control question col-md-2" name="q8" id="q8">
+                                    <option name="" value="">Select Option</option>
+                                    <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                    <option name="value2" value="2"> 2 </option>
+                                    <option name="value3" value="3"> 3 </option>
+                                    <option name="value4" value="4"> 4 </option>
+                                    <option name="value5" value="5"> 5 Strongly Agreed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h6>Question 9</h6>
+                                <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                                <select class="form-control question col-md-2" name="q9" id="q9">
+                                    <option name="" value="">Select Option</option>
+                                    <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                    <option name="value2" value="2"> 2 </option>
+                                    <option name="value3" value="3"> 3 </option>
+                                    <option name="value4" value="4"> 4 </option>
+                                    <option name="value5" value="5"> 5 Strongly Agreed</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h6>Question 10</h6>
+                                <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                                <select class="form-control question col-md-2" name="q10" id="q10">
+                                    <option name="" value="">Select Option</option>
+                                    <option name="value1" value="1"> 1 Strongly Disagreed</option>
+                                    <option name="value2" value="2"> 2 </option>
+                                    <option name="value3" value="3"> 3 </option>
+                                    <option name="value4" value="4"> 4 </option>
+                                    <option name="value5" value="5"> 5 Strongly Agreed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Best Match</h1>
+                    <button type="button" class="close" data-dismiss="modal" href="/survey" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="rounded" style="height:auto; width:100%; margin-bottom: 4%;" src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg"
+                                alt="">
+                        </div>
+                        <div class="col-6">
+                            <h3>Name: Jonny Steele</h3>
+                            <h3>Compatibility Variance: 5</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        var ques = {
+            name: $("#name").val(),
+            image: $("#image").val(),
+            q1: $("#q1").val(),
+            q2: $("#q2").val(),
+            q3: $("#q3").val(),
+            q4: $("#q4").val(),
+            q5: $("#q5").val(),
+            q6: $("#q6").val(),
+            q7: $("#q7").val(),
+            q8: $("#q8").val(),
+            q9: $("#q10").val(),
+            q10: $("#q10").val()
+        }
+
+
+
+        $('#submit').click(function () {
+            $.get("/api/friends/", function (data) {
+                console.log(data);
+                // if (data) {
+                //     $("#stats").show();
+                //     $("#name").text(data.name);
+                //     $("#role").text(data.role);
+                //     $("#age").text(data.age);
+                //     $("#force-points").text(data.forcePoints);
+                // } else {
+                //     $("#name").text(
+                //         "The force is not strong with this one. Your character was not found.");
+                //     $("#stats").hide();
+                // }
+            });
+            // if (ques.name.length > 0 && ques.image.length > 0 && ques.q1.length > 0) {
+            //     console.log(ques.name);
+            //     console.log(ques.image);
+            //     console.log(ques.q1);
+            // } else {
+            //     console.log('no');
+            // }
+        })
+    </script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
