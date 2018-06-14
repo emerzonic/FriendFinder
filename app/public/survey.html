@@ -7,40 +7,45 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="/assets/style.css">
 </head>
+<nav class="navbar fixed-top navbar-light bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">FriendFinder
+        </a>
+    </div>
+</nav>
 
-<body>
+<body class="surveyBody">
     <div class="container">
         <div class="row">
-            <div class="col-12 ">
-                <a class="display-5" href="/">Home</a>
-                <h1 class="display-6">Personal Information</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <form id="inforForm" action="/api/friends" method="POST">
-                    <div style="background-color:lightgrey; padding: 2%; border-radius: 10px;">
+                    <h1 class="formTitle">Personal Information</h1>
+                    <p>
+                        <span class="required">*</span> Required field</p>
+                    <div class="form-area">
                         <div class="form-group">
                             <label for="name">Name
-                                <span style="color:red;">*</span>
+                                <span class="required">*</span>
                             </label>
                             <input type="text" class="form-control question" name="name" id="name" aria-describedby="Help" placeholder="Enter Name" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your name with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="image">Image url
-                                <span style="color:red;">*</span>
+                                <span class="required">*</span>
                             </label>
                             <input type="text" class="form-control question" name="image" id="image" placeholder="Image Url" required>
                         </div>
                     </div>
 
-                    <h1 class="display-6">Survey Questions</h1>
-                    <div style="background-color:lightgrey; padding: 2%; border-radius: 10px;">
+                    <h1 class="formTitle">Survey Questions</h1>
+                    <div class="form-area">
                         <div class="form-group">
-                            <h6>Question 1</h6>
+                            <h6>Question 1
+                                <span class="required">*</span>
+                            </h6>
                             <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
                             <select class="form-control question col-md-2" name="q1" id="q1" required>
                                 <option name="" value="">Select Option</option>
@@ -53,8 +58,10 @@
                         </div>
 
                         <div class="form-group">
-                            <h6>Question 2</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 2
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">Generally speaking, you rely more on your experience than your imagination.</label>
                             <select class="form-control question col-md-2" name="q2" id="q2">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -65,8 +72,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 3</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 3
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">You find it easy to stay relaxed and focused even when there is some pressure.</label>
                             <select class="form-control question col-md-2" name="q3" id="q3">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -77,8 +86,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 4</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 4
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">You rarely do something just out of sheer curiosity.</label>
                             <select class="form-control question col-md-2" name="q4" id="q4">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -89,8 +100,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 5</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 5
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">People can rarely upset you.</label>
                             <select class="form-control question col-md-2" name="q5" id="q5">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -101,8 +114,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 6</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 6
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">It is often difficult for you to relate to other people’s feelings.</label>
                             <select class="form-control question col-md-2" name="q6" id="q6">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -113,8 +128,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 7</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 7
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">In a discussion, truth should be more important than people’s sensitivities.</label>
                             <select class="form-control question col-md-2" name="q7" id="q7">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -125,8 +142,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 8</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 8
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">You rarely get carried away by fantasies and ideas.</label>
                             <select class="form-control question col-md-2" name="q8" id="q8">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -137,8 +156,11 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 9</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 9
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">You think that everyone’s views should be respected regardless of whether they are supported
+                                by facts or not.</label>
                             <select class="form-control question col-md-2" name="q9" id="q9">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -149,8 +171,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <h6>Question 10</h6>
-                            <label for="inputState">Your mind is always buzzing with unexplored ideas and plans.</label>
+                            <h6>Question 10
+                                <span class="required">*</span>
+                            </h6>
+                            <label for="inputState">You feel more energetic after spending time with a group of people.</label>
                             <select class="form-control question col-md-2" name="q10" id="q10">
                                 <option name="" value="">Select Option</option>
                                 <option name="value1" value="1"> 1 Strongly Disagreed</option>
@@ -160,19 +184,20 @@
                                 <option name="value5" value="5"> 5 Strongly Agreed</option>
                             </select>
                         </div>
-                        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="submit" class="btn submit">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="modal fade bd-example-modal-lg" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title">Best Match</h1>
-                    <button type="button" class="close" data-dismiss="modal" href="/survey" aria-label="Close">
+                    <h1 class="modal-title large-modal-title">Best Match</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -180,16 +205,13 @@
                     <div class="row">
                         <div class="col-6">
                             <div>
-                                <img id='matchedImage' class="rounded" style="height:auto; width:100%; margin-bottom: 4%;" src="" alt="matched Image">
+                                <img id='matchedImage' class="rounded matched-image" src="" alt="matched Image">
                             </div>
                         </div>
                         <div class="col-6">
                             <div>
-                                <h3>Name:
+                                <h3 class="matchedName">Name:
                                     <span id="matchedName"></span>
-                                </h3>
-                                <h3>Compatibility Variance:
-                                    <span id="score"></span>
                                 </h3>
                             </div>
                         </div>
@@ -198,16 +220,23 @@
             </div>
         </div>
     </div>
-    <div class="modal fade bd-example-modal-sm" tabindex="-1" id="smallModal" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" id="smallModal" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-sm">
-          <div class="modal-content">
-            <p> Please Complete all fields.</p> 
-          </div>
+            <div class="modal-content small-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title small-modal-title">Error</h1>
+                    <button type="button" class="close" data-dismiss="modal" href="/survey" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <p class="error-text"> Please fill out all fields before submitting!</p>
+            </div>
         </div>
-      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="survey.js"></script>
+    <script type="text/javascript" src="/assets/survey.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
