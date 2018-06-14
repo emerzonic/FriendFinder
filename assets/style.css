@@ -1,8 +1,6 @@
 /* +++++++++++++++++++++++++++++++++++++++ */
 /* Home page styles*/
 /* +++++++++++++++++++++++++++++++++++++++ */
-
-
 html{
     height:100%;
 }
@@ -67,14 +65,22 @@ label, h6{
     padding-top: 70px;
 }
 
-.navbar-light .navbar-brand {
+.navbar-light .navbar-brand{
     color:#da7c7c;
     font-size: 1.5rem;
 }
 
-
-.navbar-light :hover .navbar-brand {
+.navbar-light .navbar-brand:hover {
         color:rgb(223, 200, 200);
+}
+
+.api-link {
+    color:#da7c7c;
+    font-size: 1.5rem;
+}
+
+.api-link:hover {
+    color:rgb(223, 200, 200);
 }
 .formTitle{
     font-size:1.6rem;
