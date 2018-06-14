@@ -15,5 +15,4 @@ FriendFinder is a compatibility-based "FriendFinder" application -- basically a 
 * body-parser
 * path
 
-## Visit FriendFinder at:
-[https://friendfinder.herokuapp.com](https://thawing-coast-29140.herokuapp.com/)
+[Visit friendfinder on Heroku](https://thawing-coast-29140.herokuapp.com/)
