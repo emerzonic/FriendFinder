@@ -1,37 +1,59 @@
 $("#submit").on("click", function (event) {
     event.preventDefault();
-    var fieldChecker = 0;
-    //check for emptied field
-    $('.form-control').each(function () {
-        if ($(this).val() !== '') {
-            fieldChecker++;
-        }
-    });
-
-    //validate all fields are entered
-    if (fieldChecker !== 12) {
-        $("#smallModal").modal("toggle");
+    if (isValid()) {
+        processFormSubmission();
     } else {
-        //create new friend to be submitted
-        var newFriend = {
-            name: $("#name").val(),
-            image: $("#image").val(),
-            scores: function () {
-                var arr = [];
-                $('select').each(function () {
-                    arr.push(parseInt($(this).val()));
-                });
-                return arr;
-            }()
-        };
-       
-        // AJAX post the data to the friends API.
-        $.post("/api/friends", newFriend, function (match) {
-            // Grab the best matched from the AJAX response.
-            $("#matchedName").text(match.name);
-            $("#score").text(match.score);
-            $("#matchedImage").attr("src", match.image);
-        });
-        $("#largeModal").modal("toggle");
+        displayInvalidFormSubmissionMessage();
     }
 });
+
+function isValid() {
+    const numberOfFields = 12;
+    let numberOfCompletedFields = 0;
+
+    $('.form-control').each(function () {
+        if ($(this).val() !== '') {
+            numberOfCompletedFields++;
+        }
+    });
+    return numberOfCompletedFields === numberOfFields;
+}
+
+function processFormSubmission() {
+    const newFriend = getNewFriend();
+    findMatch(newFriend);
+}
+
+function getNewFriend() {
+    return {
+        name: $("#name").val(),
+        image: $("#image").val(),
+        scores: getScores()
+    };
+}
+
+function getScores() {
+    const scores = [];
+    $('select').each(function () {
+         score = parseInt($(this).val());
+        scores.push(score);
+    });
+    return scores;
+}
+
+function findMatch(newFriend) {
+    $.post("/api/friends", newFriend, function (match) {
+        displayMatchInfo(match);
+    });
+    $("#largeModal").modal("toggle");
+}
+
+function displayMatchInfo(match) {
+    $("#matchedName").text(match.name);
+    $("#score").text(match.score);
+    $("#matchedImage").attr("src", match.image);
+}
+
+function displayInvalidFormSubmissionMessage() {
+    $("#smallModal").modal("toggle");
+}
